@@ -213,4 +213,148 @@ message = "Hello"
 
 ### Step 2: Reuse the Variable
 
-In another cell,
+In another cell, execute:
+
+```python
+print(message + " World!")
+```
+
+Output:
+
+```text
+Hello World!
+```
+
+You did not need to recreate the variable because it was already stored in the running kernel.
+
+### Step 3: Modify the Variable
+
+Execute:
+
+```python
+message = message.upper()
+print(message)
+```
+
+Output:
+
+```text
+HELLO
+```
+
+The variable now contains the uppercase version of the original text.
+
+### Important Concept
+
+Variables persist only while the relevant kernel session retains its state. If you restart the kernel, previously created variables are cleared and the necessary cells must be executed again.
+
+Also, running cells out of order can produce unexpected results because earlier executions may have changed variable values.
+
+## 10. Experiment with Interactive Execution
+
+Try this example in your `interactive_demo.py` file:
+
+```python
+# %% Create a list of marks
+marks = [85, 90, 78, 92, 88]
+
+# %% Calculate the total
+total = sum(marks)
+print("Total marks:", total)
+
+# %% Calculate the average
+average = total / len(marks)
+print("Average marks:", average)
+
+# %% Check the result
+print("Average is above 80:", average > 80)
+```
+
+Expected output when all cells are executed in order:
+
+```text
+Total marks: 433
+Average marks: 86.6
+Average is above 80: True
+```
+
+Now change one of the marks and rerun the relevant cells to observe how the results change.
+
+This is a simple example of iterative experimentation.
+
+## 11. Interactive Python vs. Regular Script Execution
+
+| Feature | Regular Python script | Interactive execution |
+|---|---|---|
+| Execution | Usually runs the whole file | Runs selected code or cells |
+| Variables | Normally reset for each new process | Persist in the running kernel |
+| Immediate experimentation | Requires rerunning the script or using a debugger | Convenient for testing individual sections |
+| Best suited for | Applications, scripts, and automation | Learning, exploration, and experimentation |
+| Typical file | `.py` | `.py` with `# %%` cells or `.ipynb` |
+
+Both approaches are important. Interactive execution is excellent for experimentation, while regular script execution remains essential for production applications and automation.
+
+## 12. Common Problems and Solutions
+
+### Problem 1: Interactive Window Does Not Open
+
+- Confirm that the Jupyter extension is installed and enabled.
+- Make sure the Python file is saved.
+- Try executing a cell using the **Run Cell** action.
+- Reload VS Code if necessary.
+
+### Problem 2: No Kernel Is Available
+
+- Confirm that Python 3 is installed.
+- Select the interpreter inside `.venv`.
+- Verify that `ipykernel` is installed in that environment.
+
+Run:
+
+```bash
+python -m pip show ipykernel
+```
+
+### Problem 3: NameError
+
+If you see an error such as:
+
+```text
+NameError: name 'numbers' is not defined
+```
+
+The variable may not have been created in the current kernel session.
+
+Run the cell that defines the variable before executing the cell that uses it.
+
+### Problem 4: Variables Have Unexpected Values
+
+Cells may have been executed out of order.
+
+Restart the kernel and execute the cells sequentially from the beginning.
+
+## 13. Lesson Summary
+
+In this lesson, you learned:
+
+- What Interactive Python is.
+- Why interactive execution is useful for AI development.
+- How to install `ipykernel`.
+- How to configure VS Code for interactive execution.
+- How to use `Shift + Enter` to execute code.
+- How to organize Python files using `# %%` cells.
+- How variables persist across executions in the same kernel.
+- How to troubleshoot common interactive execution problems.
+
+## 14. Practice Exercise
+
+Create a file named `interactive_practice.py` and divide it into three cells.
+
+**Cell 1:** Create a list of five numbers.
+
+**Cell 2:** Calculate and display the total and average.
+
+**Cell 3:** Display whether the average is greater than 50.
+
+Execute each cell using the interactive controls and verify that the results are correct.
+
