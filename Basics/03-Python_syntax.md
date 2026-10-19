@@ -361,4 +361,10 @@ In this lesson, you learned:
 - What PEP 8 is and how it improves code readability.
 - How to identify and correct common syntax mistakes.
 
+
+### Infographic for the above content
+
+<img width="1536" height="2752" alt="Gemini_Generated_Image_82ineq82ineq82in" src="https://github.com/user-attachments/assets/c0eb1932-4801-4fda-af22-f4c5d8bab35a" />
+
+
 **Next lesson: Python Errors — Understanding Syntax Errors, Runtime Errors, and Debugging.**
