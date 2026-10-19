@@ -176,8 +176,9 @@ PythonProjects/
 
 **Note:** The `.venv` directory will be created when you configure a Python virtual environment. It does not need to exist at this stage.
 
-## 7. Ready to Write Your First Python Program?
 
-Your project folder is ready. In the next lesson, you will create a Python file, write your first program, and execute it using the VS Code terminal.
+### Reference Image
 
-Let's start coding!
+<img width="1024" height="1536" alt="Python Project Setup in VS Code Guide" src="https://github.com/user-attachments/assets/55e657aa-2b38-496d-b30c-85d294499bbb" />
+
+
